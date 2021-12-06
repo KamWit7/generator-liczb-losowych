@@ -1,0 +1,106 @@
+@import "./utils/variable";
+
+* {
+  font-family: getFont(mainFont);
+  // color: getColor(fontColor);
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-size: 30px;
+  text-align: center;
+}
+
+body {
+  background-color: getColor(bgPrimary);
+  color: getColor(fontColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: getColor(primaryColor);
+
+  align-self: center;
+
+  min-width: 150px;
+  height: fit-content;
+  padding: 20px;
+  margin: 0 150px;
+
+  font-size: 40px;
+
+  border-style: none;
+  border-radius: 3px;
+
+  box-shadow: 10px 10px 13px 0px rgba(0, 0, 0, 0.75);
+
+  cursor: pointer;
+
+  transition: color, background-color 250ms ease-in-out;
+
+  &:hover {
+    color: black;
+    background-color: getColor(secondaryColor);
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    color: transparent;
+  }
+
+  .even-numbers {
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    & > li {
+      margin: 5px;
+      width: 60px;
+    }
+  }
+
+  .odd-numbers {
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    & > li {
+      margin: 5px;
+      width: 80px;
+    }
+  }
+}
+
+.appear-aniamtion {
+  animation: appear 350ms ease-in-out forwards;
+}
+
+@keyframes appear {
+  0% {
+    color: transparent;
+  }
+
+  100% {
+    color: getColor(fontColor);
+  }
+}

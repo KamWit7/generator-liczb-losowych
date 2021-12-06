@@ -1,0 +1,21 @@
+$colors: (
+  primaryColor: #ed8000,
+  secondaryColor: #652999c4,
+  bgPrimary: #202124,
+  fontColor: #e8eaed,
+);
+
+$fonts: (
+  "mainFont": (
+    "Fuzzy Bubbles",
+    cursive,
+  ),
+);
+
+@function getColor($name) {
+  @return map-get($colors, $name);
+}
+
+@function getFont($font) {
+  @return map-get($fonts, $font);
+}
