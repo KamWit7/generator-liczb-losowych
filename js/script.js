@@ -52,10 +52,10 @@ const generateNumbers = () => {
     setAnimation()
   }, 0)
 
-  let randomNumber = numbers.map(() => getRandomBetween(MIN_NUMBER, MAX_NUMBER))
+  let randomNumbers = numbers.map(() => getRandomBetween(MIN_NUMBER, MAX_NUMBER))
 
-  let oddNumbers = filterNumbers(randomNumber, "odd")
-  let evenNumbers = filterNumbers(randomNumber, "even")
+  let oddNumbers = filterNumbers(randomNumbers, "odd")
+  let evenNumbers = filterNumbers(randomNumbers, "even")
 
   displayNumbers(
     oddNumbers.sort((a, b) => a - b),

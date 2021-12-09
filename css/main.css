@@ -1,3 +1,21 @@
+@-webkit-keyframes appear {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #e8eaed;
+  }
+}
+
+@keyframes appear {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #e8eaed;
+  }
+}
+
 * {
   font-family: "Fuzzy Bubbles", cursive;
   margin: 0;
@@ -45,15 +63,15 @@ p {
   font-size: 40px;
   border-style: none;
   border-radius: 3px;
-  -webkit-box-shadow: 10px 10px 13px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 10px 10px 13px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   -webkit-transition: color, background-color 250ms ease-in-out;
   transition: color, background-color 250ms ease-in-out;
 }
 
 .btn:hover {
-  color: black;
+  color: #202124;
   background-color: #652999c4;
 }
 
@@ -70,7 +88,7 @@ p {
   color: transparent;
 }
 
-.list .even-numbers {
+.list .even-numbers, .list .odd-numbers {
   width: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,18 +105,6 @@ p {
   width: 60px;
 }
 
-.list .odd-numbers {
-  width: 280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
 .list .odd-numbers > li {
   margin: 5px;
   width: 80px;
@@ -107,23 +113,5 @@ p {
 .appear-aniamtion {
   -webkit-animation: appear 350ms ease-in-out forwards;
           animation: appear 350ms ease-in-out forwards;
-}
-
-@-webkit-keyframes appear {
-  0% {
-    color: transparent;
-  }
-  100% {
-    color: #e8eaed;
-  }
-}
-
-@keyframes appear {
-  0% {
-    color: transparent;
-  }
-  100% {
-    color: #e8eaed;
-  }
 }
 /*# sourceMappingURL=main.css.map */
